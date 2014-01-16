@@ -18,3 +18,4 @@
 
 - name: Install runit
   shell: "cd /package && curl -sSL 'http://smarden.org/runit/runit-{{ runit_version }}.tar.gz' | gunzip | tar -xpf - && cd admin/runit-{{ runit_version }} && package/install && package/install-man"
+  sudo: true
