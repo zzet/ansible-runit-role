@@ -1,2 +1,20 @@
 ---
 # tasks file for runit
+#- name: Include rhel tasks
+  #include: rhel_family.yml
+  #when: not "{{ ansible_os_family }}" != "rhel"
+
+#- name: Include gentoo tasks
+  #include: gentoo_family.yml
+  #when: not "{{ ansible_os_family }}" != "gentoo"
+
+- name: Include debian or ubuntu tasks
+  include: debian_family.yml
+  when: not "{{ ansible_os_family }}" != "debian"
+
+- name: add /package directory
+  file: state=directory dest="/package" mode=1755
+  sudo: true
+
+- name: Install runit
+  shell: "cd /package && curl -sSL 'http://smarden.org/runit/runit-{{ runit_version }}.tar.gz' | gunzip | tar -xpf - && cd admin/runit-{{ runit_version }} && package/install && package/install-man"

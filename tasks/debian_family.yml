@@ -1,0 +1,12 @@
+---
+- name: Ensure packages are installed
+  apt: pkg={{ item }}
+  with_items:
+    - rpm-build
+    - rpmdevtools
+    - tar
+    - gzip
+    - python-pycurl
+  sudo: true
+  tags:
+    - runit
