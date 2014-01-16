@@ -45,3 +45,7 @@ Contributing
  - Push to the branch (git push origin my-new-feature)
 
  - Create new Pull Request
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/zzet/ansible-runit-role/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
