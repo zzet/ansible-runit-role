@@ -3,6 +3,11 @@ Role Name
 
 Install runit supervisor
 
+Role ready status
+------------
+
+[![Build Status](https://travis-ci.org/zzet/ansible-runit-role.png?branch=master)](https://travis-ci.org/zzet/ansible-runit-role)
+
 Requirements
 ------------
 
